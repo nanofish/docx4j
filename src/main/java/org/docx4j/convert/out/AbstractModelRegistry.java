@@ -24,12 +24,13 @@ import java.util.Map;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.model.Model;
 import org.docx4j.model.SymbolModel;
 import org.docx4j.model.TransformState;
 import org.docx4j.model.table.TableModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Node;
@@ -64,7 +65,7 @@ import org.w3c.dom.NodeList;
  *  
  */
 public abstract class AbstractModelRegistry {
-	private final static Logger log = Logger.getLogger(AbstractModelRegistry.class);
+	private final static Logger log = LoggerFactory.getLogger(AbstractModelRegistry.class);
 	
 	private Map<String, Class> modelClasses = new HashMap<String, Class>();
 	private Map<String, ModelConverter> converterInstances = new HashMap<String, ModelConverter>();

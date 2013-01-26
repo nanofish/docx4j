@@ -19,7 +19,7 @@
  */
 package org.docx4j.model.listnumbering;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.util.StringTokenizer;
 

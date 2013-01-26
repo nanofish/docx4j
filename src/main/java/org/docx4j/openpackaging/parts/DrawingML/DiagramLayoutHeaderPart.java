@@ -21,11 +21,12 @@
 package org.docx4j.openpackaging.parts.DrawingML;
 
 
-import org.apache.log4j.Logger;
 import org.docx4j.dml.diagram.CTDiagramDefinitionHeader;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -40,7 +41,7 @@ import org.docx4j.openpackaging.parts.relationships.Namespaces;
  */
 public final class DiagramLayoutHeaderPart extends JaxbDmlPart<CTDiagramDefinitionHeader> {
 	
-	private static Logger log = Logger.getLogger(DiagramLayoutHeaderPart.class);			
+	private static Logger log = LoggerFactory.getLogger(DiagramLayoutHeaderPart.class);			
 	
 	public DiagramLayoutHeaderPart(PartName partName) throws InvalidFormatException {
 		super(partName);

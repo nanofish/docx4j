@@ -21,7 +21,6 @@ package org.docx4j.convert.out;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.wml.Body;
 import org.docx4j.wml.BooleanDefaultTrue;
 import org.docx4j.wml.Br;
@@ -29,6 +28,8 @@ import org.docx4j.wml.P;
 import org.docx4j.wml.PPr;
 import org.docx4j.wml.R;
 import org.docx4j.wml.STBrType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author alberto
@@ -36,7 +37,7 @@ import org.docx4j.wml.STBrType;
  */
 public class PageBreak {
 	
-	private static Logger log = Logger.getLogger(PageBreak.class);
+	private static Logger log = LoggerFactory.getLogger(PageBreak.class);
 	
 	/**
 	 * If a page-break w:br w:type="page" is found within a run with some formatting applied to it

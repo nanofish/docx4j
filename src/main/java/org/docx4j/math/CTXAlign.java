@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
+
 import org.docx4j.sharedtypes.STXAlign;
 import org.jvnet.jaxb2_commons.ppp.Child;
 

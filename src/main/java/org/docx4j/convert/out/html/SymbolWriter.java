@@ -21,11 +21,12 @@ package org.docx4j.convert.out.html;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.convert.out.AbstractSymbolWriter;
 import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.fonts.PhysicalFont;
 import org.docx4j.wml.R;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
@@ -41,7 +42,7 @@ import org.w3c.dom.Text;
 */
 public class SymbolWriter extends AbstractSymbolWriter {
 	
-  private final static Logger log = Logger.getLogger(SymbolWriter.class);
+  private final static Logger log = LoggerFactory.getLogger(SymbolWriter.class);
 
   
 

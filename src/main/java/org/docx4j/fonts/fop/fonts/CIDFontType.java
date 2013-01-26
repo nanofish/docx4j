@@ -26,7 +26,6 @@
 package org.docx4j.fonts.fop.fonts;
 
 //import org.apache.avalon.framework.ValuedEnum;
-import org.docx4j.fonts.fop.fonts.ValuedEnum;
 
 /**
  * This class enumerates all supported CID font types.

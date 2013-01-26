@@ -6,10 +6,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
 import org.docx4j.fonts.fop.fonts.EmbedFontInfo;
 import org.docx4j.fonts.fop.fonts.FontCache;
 import org.docx4j.fonts.fop.fonts.FontResolver;
@@ -20,6 +18,8 @@ import org.docx4j.fonts.fop.fonts.autodetect.FontInfoFinder;
 import org.docx4j.fonts.microsoft.MicrosoftFonts;
 import org.docx4j.fonts.microsoft.MicrosoftFontsRegistry;
 import org.docx4j.openpackaging.parts.WordprocessingML.ObfuscatedFontPart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 //import com.lowagie.text.pdf.BaseFont;
 
@@ -34,7 +34,7 @@ import org.docx4j.openpackaging.parts.WordprocessingML.ObfuscatedFontPart;
  */
 public class PhysicalFonts {
 
-	protected static Logger log = Logger.getLogger(PhysicalFonts.class);
+	protected static Logger log = LoggerFactory.getLogger(PhysicalFonts.class);
 	
 	protected static FontCache fontCache;
 
@@ -336,7 +336,7 @@ public class PhysicalFonts {
 //							log.error(afm + " does not support UTF encoding, so ignoring");
 //							continue;
 //						} catch (Exception e) {
-//							log.error(e);
+//							log.error("", e);
 //							continue;
 //						}
 			        	pf = new PhysicalFont(triplet.getName(),fontInfo, fontResolver);
@@ -361,7 +361,7 @@ public class PhysicalFonts {
 //								log.error(pfm + " does not support UTF encoding, so ignoring");
 //								continue;
 //							} catch (Exception e) {
-//								log.error(e);
+//								log.error("", e);
 //								continue;
 //							}
 				        	pf = new PhysicalFont(triplet.getName(), fontInfo, fontResolver);

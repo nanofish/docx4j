@@ -310,7 +310,7 @@ public final class SlidePart extends JaxbPmlPart<Sld> {
 			return jaxbElement;
 			
 		} catch (JAXBException e) {
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
 	}	

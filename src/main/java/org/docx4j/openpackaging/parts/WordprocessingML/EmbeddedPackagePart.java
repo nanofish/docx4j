@@ -4,14 +4,15 @@ package org.docx4j.openpackaging.parts.WordprocessingML;
 // chart is embedded in a pptx.  ie there is nothing
 // about it which is specific to WML.
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EmbeddedPackagePart extends BinaryPart { // maybe should extend EmbeddedPackagePart
 
-	private static Logger log = Logger.getLogger(EmbeddedPackagePart.class);		
+	private static Logger log = LoggerFactory.getLogger(EmbeddedPackagePart.class);		
 	
 	public EmbeddedPackagePart(PartName partName) throws InvalidFormatException {
 		super(partName);

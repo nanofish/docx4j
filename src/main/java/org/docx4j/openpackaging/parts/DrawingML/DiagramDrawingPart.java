@@ -24,19 +24,16 @@ package org.docx4j.openpackaging.parts.DrawingML;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
-import org.docx4j.XmlUtils;
 import org.docx4j.TraversalUtil.Callback;
-import org.docx4j.dml.diagram.CTCxn;
+import org.docx4j.XmlUtils;
 import org.docx4j.dml.diagram.CTDataModel;
-import org.docx4j.dml.diagram.CTElemPropSet;
-import org.docx4j.dml.diagram.CTPt;
 import org.docx4j.dml.diagram2008.CTShape;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
-import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -81,7 +78,7 @@ public final class DiagramDrawingPart extends JaxbDmlPart<CTDataModel> {
 	</dgm:dataModel>
 */
  	
-	private static Logger log = Logger.getLogger(DiagramDrawingPart.class);			
+	private static Logger log = LoggerFactory.getLogger(DiagramDrawingPart.class);			
 	
 	public DiagramDrawingPart(PartName partName) throws InvalidFormatException {
 		super(partName);

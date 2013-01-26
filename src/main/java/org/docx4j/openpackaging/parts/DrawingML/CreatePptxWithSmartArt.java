@@ -29,15 +29,10 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.docx4j.XmlUtils;
 import org.docx4j.dml.diagram.CTDiagramDefinition;
-import org.docx4j.model.structure.PageSizePaper;
 import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PartName;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramColorsPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramDataPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramLayoutPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramStylePart;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;

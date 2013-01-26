@@ -22,12 +22,14 @@ package org.docx4j.openpackaging.parts.WordprocessingML;
 
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
@@ -35,17 +37,15 @@ import org.docx4j.wml.DocDefaults;
 import org.docx4j.wml.PPr;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.Style;
-import org.docx4j.wml.Styles;
 import org.docx4j.wml.Style.BasedOn;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import org.docx4j.wml.Styles;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public final class StyleDefinitionsPart extends JaxbXmlPart<Styles> {
 	
-	private static Logger log = Logger.getLogger(StyleDefinitionsPart.class);		
+	private static Logger log = LoggerFactory.getLogger(StyleDefinitionsPart.class);		
 	
 	public StyleDefinitionsPart(PartName partName) throws InvalidFormatException {
 		super(partName);

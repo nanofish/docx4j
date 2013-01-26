@@ -30,7 +30,6 @@ import java.util.Map;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
 import org.docx4j.TraversalUtil.CallbackImpl;
 import org.docx4j.XmlUtils;
@@ -57,6 +56,8 @@ import org.docx4j.wml.Numbering;
 import org.docx4j.wml.P.Hyperlink;
 import org.docx4j.wml.Style;
 import org.docx4j.wml.Styles;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -65,7 +66,7 @@ import org.docx4j.wml.Styles;
  */
 public class MainDocumentPart extends DocumentPart<org.docx4j.wml.Document> implements ContentAccessor  {
 	
-	private static Logger log = Logger.getLogger(MainDocumentPart.class);
+	private static Logger log = LoggerFactory.getLogger(MainDocumentPart.class);
 		
 	
 	public MainDocumentPart(PartName partName) throws InvalidFormatException {
@@ -141,7 +142,7 @@ public class MainDocumentPart extends DocumentPart<org.docx4j.wml.Document> impl
 				getStyleDefinitionsPart().createVirtualStylesForDocDefaults();
 			} catch (Docx4JException e) {
 				// Shouldn't happen, so catch here
-				log.error(e);
+				log.error("", e);
 			}
 	    	
 			// Get these first, so we can be sure they are defined... 

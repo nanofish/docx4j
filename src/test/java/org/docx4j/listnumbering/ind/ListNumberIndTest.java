@@ -23,19 +23,13 @@ import static org.junit.Assert.*;
 
 import java.io.FileInputStream;
 
-import org.docx4j.diff.Differencer;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.transform.stream.StreamResult;
 
 import org.docx4j.jaxb.Context;
-import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.NumberingDefinitionsPart;
-import org.docx4j.wml.P;
 import org.docx4j.wml.PPrBase.Ind;
 import org.junit.Test;
 

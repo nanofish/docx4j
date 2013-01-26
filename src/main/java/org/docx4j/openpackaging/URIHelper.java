@@ -30,12 +30,10 @@ package org.docx4j.openpackaging;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.log4j.Logger;
-
-import org.docx4j.openpackaging.contenttype.ContentTypes;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
-import org.docx4j.openpackaging.exceptions.InvalidOperationException;
 import org.docx4j.openpackaging.parts.PartName;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -47,7 +45,7 @@ import org.docx4j.openpackaging.parts.PartName;
  */
 public final class URIHelper {
 
-	private static Logger log = Logger.getLogger(URIHelper.class);	
+	private static Logger log = LoggerFactory.getLogger(URIHelper.class);	
 	
 	/**
 	 * Package root URI.

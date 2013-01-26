@@ -2,16 +2,11 @@ package org.docx4j.model.styles;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import org.apache.log4j.Logger;
-import org.docx4j.model.PropertyResolver;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.wml.Style;
-import org.docx4j.wml.Styles;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Represents a Tree of Objects of generic type T. The Tree is represented as
@@ -25,7 +20,7 @@ import org.docx4j.wml.Styles;
  */
 public class Tree<T> {
 	
-	private static Logger log = Logger.getLogger(Tree.class);	
+	private static Logger log = LoggerFactory.getLogger(Tree.class);	
  
     private Node<T> rootElement;
          

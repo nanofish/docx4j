@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
+
 import org.docx4j.vml.officedrawing.STInsetMode;
 import org.docx4j.vml.officedrawing.STTrueFalse;
 import org.docx4j.wml.CTTxbxContent;

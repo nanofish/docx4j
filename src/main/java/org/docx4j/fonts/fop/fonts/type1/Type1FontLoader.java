@@ -33,7 +33,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.IOUtils;
-
 import org.docx4j.fonts.fop.fonts.CodePointMapping;
 import org.docx4j.fonts.fop.fonts.FontLoader;
 import org.docx4j.fonts.fop.fonts.FontResolver;

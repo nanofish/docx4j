@@ -4,11 +4,12 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class NamespacePrefixMapperUtils {
 	
-	private static Logger log = Logger.getLogger(NamespacePrefixMapperUtils.class);		
+	private static Logger log = LoggerFactory.getLogger(NamespacePrefixMapperUtils.class);		
 	
 	/*
 	 * As from 2010 08 26,  
@@ -176,7 +177,7 @@ public class NamespacePrefixMapperUtils {
 		} catch (javax.xml.bind.PropertyException cnfe) {
 			
 //			cnfe.printStackTrace();
-			log.error(cnfe);
+			log.error("", cnfe);
 			throw cnfe;
 			
 		}

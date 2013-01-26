@@ -21,24 +21,14 @@
 package org.docx4j.openpackaging.parts;
 
 
-import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-import javax.xml.XMLConstants;
-import javax.xml.bind.JAXBException;
-import javax.xml.namespace.NamespaceContext;
 import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.commons.lang.text.StrTokenizer;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.NamespacePrefixMappings;
 import org.docx4j.openpackaging.exceptions.Docx4JException;

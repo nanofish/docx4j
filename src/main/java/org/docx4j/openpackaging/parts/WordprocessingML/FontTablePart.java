@@ -26,9 +26,7 @@ package org.docx4j.openpackaging.parts.WordprocessingML;
 import java.io.IOException;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
@@ -36,11 +34,13 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.wml.FontRel;
 import org.docx4j.wml.Fonts;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public final class FontTablePart extends JaxbXmlPart<Fonts> {
 	
-	private static Logger log = Logger.getLogger(FontTablePart.class);		
+	private static Logger log = LoggerFactory.getLogger(FontTablePart.class);		
 	
 	public FontTablePart(PartName partName) throws InvalidFormatException {
 		super(partName);

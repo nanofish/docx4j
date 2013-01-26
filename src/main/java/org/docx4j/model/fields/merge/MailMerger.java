@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.docx4j.Docx4jProperties;
 import org.docx4j.TraversalUtil;
 import org.docx4j.XmlUtils;
@@ -24,7 +23,6 @@ import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
-import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.WordprocessingML.FooterPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
@@ -38,6 +36,8 @@ import org.docx4j.wml.CTRel;
 import org.docx4j.wml.ContentAccessor;
 import org.docx4j.wml.P;
 import org.docx4j.wml.SectPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -77,7 +77,7 @@ import org.docx4j.wml.SectPr;
  */
 public class MailMerger {
 
-	private static Logger log = Logger.getLogger(MailMerger.class);		
+	private static Logger log = LoggerFactory.getLogger(MailMerger.class);		
 
 	/**
 	 * A "poor man's" approach, which generates the mail merge  

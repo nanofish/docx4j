@@ -29,6 +29,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import org.docx4j.vml.STExt;
 import org.jvnet.jaxb2_commons.ppp.Child;
 

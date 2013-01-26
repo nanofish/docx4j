@@ -2,14 +2,15 @@ package org.docx4j.convert.out.pdf.viaXSLFO;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.UnitsOfMeasurement;
-import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.convert.out.AbstractTableWriter;
+import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.model.TransformState;
 import org.docx4j.model.properties.Property;
 import org.docx4j.model.table.Cell;
 import org.docx4j.model.table.TableModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -18,7 +19,7 @@ import org.w3c.dom.Element;
  *  
 */
 public class TableWriter extends AbstractTableWriter {
-	protected final static Logger logger = Logger.getLogger(TableWriter.class);
+	protected final static Logger logger = LoggerFactory.getLogger(TableWriter.class);
 	protected final static String TABLE_BORDER_MODEL = "border-collapse";
 	
 	@Override

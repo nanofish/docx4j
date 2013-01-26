@@ -1,16 +1,16 @@
 package org.docx4j.convert.in.xhtml;
 
-import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import static org.junit.Assert.*;
 
+import java.util.List;
+
+import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.wml.Tbl;
 import org.docx4j.wml.Tc;
 import org.docx4j.wml.TcPrInner;
 import org.docx4j.wml.Tr;
 import org.junit.Test;
-
-import java.util.List;
 
 public class XHTMLImporterTest {
 

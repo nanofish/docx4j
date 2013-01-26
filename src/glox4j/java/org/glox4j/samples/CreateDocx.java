@@ -1,16 +1,9 @@
 package org.glox4j.samples;
 
-import javax.xml.bind.JAXBElement;
-
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.dml.diagram.CTDataModel;
 import org.docx4j.dml.diagram.CTElemPropSet;
-import org.docx4j.dml.diagram.CTPt;
-import org.docx4j.dml.diagram.CTSampleData;
 import org.docx4j.dml.diagram.ObjectFactory;
-import org.docx4j.dml.wordprocessingDrawing.Inline;
-import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.DrawingML.DiagramColorsPart;
 import org.docx4j.openpackaging.parts.DrawingML.DiagramDataPart;
@@ -19,6 +12,8 @@ import org.docx4j.openpackaging.parts.DrawingML.DiagramStylePart;
 import org.docx4j.samples.AbstractSample;
 import org.docx4j.wml.P;
 import org.glox4j.openpackaging.packages.GloxPackage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Create a docx containing SmartArt
@@ -30,7 +25,7 @@ import org.glox4j.openpackaging.packages.GloxPackage;
  */
 public class CreateDocx extends AbstractSample {
 	
-	private static Logger log = Logger.getLogger(CreateDocx.class);						
+	private static Logger log = LoggerFactory.getLogger(CreateDocx.class);						
 
 	/**
 	 * @param args

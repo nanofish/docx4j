@@ -23,13 +23,10 @@ package org.pptx4j.model;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.dml.CTShapeProperties;
 import org.docx4j.dml.CTTextBody;
 import org.docx4j.dml.CTTextListStyle;
-import org.pptx4j.jaxb.Context;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideMasterPart;
@@ -37,11 +34,14 @@ import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
+import org.pptx4j.jaxb.Context;
 import org.pptx4j.pml.CTBackground;
 import org.pptx4j.pml.CTPlaceholder;
 import org.pptx4j.pml.GroupShape;
 import org.pptx4j.pml.Shape;
 import org.pptx4j.pml.Shape.NvSpPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The idea of this class is that it provides 
@@ -63,7 +63,7 @@ import org.pptx4j.pml.Shape.NvSpPr;
  */
 public class ResolvedLayout implements Cloneable {
 	
-	protected static Logger log = Logger.getLogger(ResolvedLayout.class);
+	protected static Logger log = LoggerFactory.getLogger(ResolvedLayout.class);
 	
 	private CTBackground bg;
 	/**

@@ -1,8 +1,5 @@
 package org.docx4j.openpackaging.parts.SpreadsheetML;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-
 import org.docx4j.openpackaging.contenttype.ContentTypes;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.exceptions.PartUnrecognisedException;
@@ -68,7 +65,7 @@ public abstract class JaxbSmlPart<E>  extends JaxbXmlPart<E> {
 //			log.debug( this.getClass().getName() + " unmarshalled" );									
 //
 //		} catch (JAXBException e ) {
-//			log.error(e);
+//			log.error("", e);
 //			throw e;
 //		}
 //		return jaxbElement;

@@ -22,9 +22,10 @@ package org.docx4j.fonts;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.FontTablePart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -49,7 +50,7 @@ import org.docx4j.openpackaging.parts.WordprocessingML.FontTablePart;
 public class IdentityPlusMapper extends Mapper {
 	
 	
-	protected static Logger log = Logger.getLogger(IdentityPlusMapper.class);
+	protected static Logger log = LoggerFactory.getLogger(IdentityPlusMapper.class);
 
 	public IdentityPlusMapper() {
 		super();

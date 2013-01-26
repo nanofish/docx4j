@@ -20,10 +20,11 @@
 
 package org.docx4j.model.table;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.wml.Tc;
 import org.docx4j.wml.TcPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 /**
@@ -57,7 +58,7 @@ import org.w3c.dom.Node;
  */
 public class Cell {
 	
-	private final static Logger logger = Logger.getLogger(Cell.class);
+	private final static Logger logger = LoggerFactory.getLogger(Cell.class);
 	
 	private TableModel table;
 	private int row;

@@ -5,10 +5,8 @@ import java.util.Map;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.CustomXmlPart;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.FooterPart;
@@ -18,10 +16,12 @@ import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
 import org.docx4j.wml.CTDataBinding;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BindingHandler {
 	
-	private static Logger log = Logger.getLogger(BindingHandler.class);		
+	private static Logger log = LoggerFactory.getLogger(BindingHandler.class);		
 	
 //	static Templates xslt;			
 	private static XPathFactory xPathFactory;

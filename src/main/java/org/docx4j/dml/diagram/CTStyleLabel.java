@@ -26,6 +26,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+
 import org.docx4j.dml.CTOfficeArtExtensionList;
 import org.docx4j.dml.CTScene3D;
 import org.docx4j.dml.CTShape3D;

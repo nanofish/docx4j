@@ -5,13 +5,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import org.apache.log4j.Logger;
-import org.docx4j.model.PropertyResolver;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.wml.Style;
 import org.docx4j.wml.Styles;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Represent a style hierarchy as a tree.
@@ -26,7 +25,7 @@ import org.docx4j.wml.Styles;
  */
 public class StyleTree {
 	
-	private static Logger log = Logger.getLogger(StyleTree.class);
+	private static Logger log = LoggerFactory.getLogger(StyleTree.class);
 
 	/**
 	 * Tree of table styles

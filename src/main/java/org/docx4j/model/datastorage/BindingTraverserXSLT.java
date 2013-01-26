@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.Source;
 import javax.xml.transform.Templates;
@@ -20,7 +19,6 @@ import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
 import org.apache.xmlgraphics.image.loader.ImageSize;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.in.xhtml.XHTMLImporter;
@@ -38,10 +36,11 @@ import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.wml.CTSdtDate;
 import org.docx4j.wml.Color;
 import org.docx4j.wml.P;
-import org.docx4j.wml.RFonts;
-import org.docx4j.wml.RPr;
 import org.docx4j.wml.P.Hyperlink;
+import org.docx4j.wml.RPr;
 import org.opendope.xpaths.Xpaths.Xpath;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Node;
@@ -49,7 +48,7 @@ import org.w3c.dom.traversal.NodeIterator;
 
 public class BindingTraverserXSLT implements BindingTraverserInterface {
 	
-	private static Logger log = Logger.getLogger(BindingTraverserXSLT.class);		
+	private static Logger log = LoggerFactory.getLogger(BindingTraverserXSLT.class);		
 	
 
 	static Templates xslt;			
@@ -180,7 +179,7 @@ public class BindingTraverserXSLT implements BindingTraverserInterface {
 				if (e instanceof NullPointerException) {
 					((NullPointerException)e).printStackTrace();
 				}
-				log.error(e);
+				log.error("", e);
 				log.error("with XHTML: " + r);
 				//throw new Docx4JException("Problem converting XHTML", e);
 				
@@ -269,7 +268,7 @@ public class BindingTraverserXSLT implements BindingTraverserInterface {
 			return docfrag;			
 			
 		} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 	}
@@ -342,7 +341,7 @@ public class BindingTraverserXSLT implements BindingTraverserInterface {
 			}				
 			
 		} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 		
@@ -671,7 +670,7 @@ public class BindingTraverserXSLT implements BindingTraverserInterface {
 			return docfrag;
 			
 		} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 		
@@ -786,7 +785,7 @@ public class BindingTraverserXSLT implements BindingTraverserInterface {
 			return docfrag;
 			
 		} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 		

@@ -23,11 +23,11 @@ import java.util.HashMap;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.wml.SdtPr;
-import org.w3c.dom.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -35,7 +35,7 @@ import org.w3c.dom.traversal.NodeIterator;
 
 public abstract class SdtTagHandler {
 	
-	private static Logger log = Logger.getLogger(SdtTagHandler.class);
+	private static Logger log = LoggerFactory.getLogger(SdtTagHandler.class);
 	
 	public abstract Node toNode(WordprocessingMLPackage wmlPackage, SdtPr sdtPr,
 			HashMap<String, String> tagMap,

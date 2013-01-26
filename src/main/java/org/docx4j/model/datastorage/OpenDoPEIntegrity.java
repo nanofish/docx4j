@@ -22,10 +22,8 @@ package org.docx4j.model.datastorage;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.StringTokenizer;
 
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.Source;
 import javax.xml.transform.Templates;
@@ -34,28 +32,18 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
-import org.apache.xmlgraphics.image.loader.ImageSize;
 import org.docx4j.XmlUtils;
-import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
-import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPartAbstractImage;
 import org.docx4j.openpackaging.parts.WordprocessingML.FooterPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
-import org.docx4j.wml.P.Hyperlink;
-import org.docx4j.wml.RPr;
-import org.w3c.dom.Document;
-import org.w3c.dom.DocumentFragment;
-import org.w3c.dom.Node;
-import org.w3c.dom.traversal.NodeIterator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Word (2007) can't open a docx if it has more than one
@@ -70,7 +58,7 @@ import org.w3c.dom.traversal.NodeIterator;
  */
 public class OpenDoPEIntegrity {
 	
-	private static Logger log = Logger.getLogger(OpenDoPEIntegrity.class);	
+	private static Logger log = LoggerFactory.getLogger(OpenDoPEIntegrity.class);	
 	
 	private HashMap<String, String> commentRangeStart;  // value doesn't matter
 	private HashMap<String, String> commentRangeEnd;

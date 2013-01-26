@@ -19,14 +19,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.docx4j.XmlUtils;
-import org.docx4j.fonts.Mapper;
-import org.docx4j.fonts.PhysicalFont;
-import org.docx4j.fonts.PhysicalFonts;
-import org.docx4j.fonts.fop.fonts.FontTriplet;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 import org.apache.avalon.framework.configuration.Configuration;
 import org.apache.avalon.framework.configuration.ConfigurationException;
 import org.apache.avalon.framework.configuration.DefaultConfigurationBuilder;
@@ -36,10 +28,19 @@ import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.FormattingResults;
 import org.apache.fop.apps.MimeConstants;
-import org.apache.log4j.Logger;
+import org.docx4j.XmlUtils;
+import org.docx4j.fonts.Mapper;
+import org.docx4j.fonts.PhysicalFont;
+import org.docx4j.fonts.PhysicalFonts;
+import org.docx4j.fonts.fop.fonts.FontTriplet;
+import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 public class FopUtils {
-	protected static Logger log = Logger.getLogger(FopUtils.class);
+	protected static Logger log = LoggerFactory.getLogger(FopUtils.class);
 	//used as a ThreadLocal
 	protected static Map<Long, FopFactory> fopFactories = new TreeMap<Long, FopFactory>();
 

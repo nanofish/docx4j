@@ -21,6 +21,7 @@ package org.docx4j.math;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -30,6 +31,7 @@ import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.namespace.QName;
+
 import org.docx4j.wml.Br;
 import org.docx4j.wml.CTFtnEdnRef;
 import org.docx4j.wml.CTObject;

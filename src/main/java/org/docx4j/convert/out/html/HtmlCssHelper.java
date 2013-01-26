@@ -21,15 +21,14 @@ package org.docx4j.convert.out.html;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.model.properties.Property;
 import org.docx4j.model.properties.PropertyFactory;
 import org.docx4j.model.properties.paragraph.PBorderBottom;
 import org.docx4j.model.properties.paragraph.PBorderTop;
 import org.docx4j.model.properties.paragraph.PShading;
 import org.docx4j.model.styles.StyleTree;
-import org.docx4j.model.styles.Tree;
 import org.docx4j.model.styles.StyleTree.AugmentedStyle;
+import org.docx4j.model.styles.Tree;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.wml.CTShd;
 import org.docx4j.wml.CTTblPrBase;
@@ -39,6 +38,8 @@ import org.docx4j.wml.RPr;
 import org.docx4j.wml.Style;
 import org.docx4j.wml.TcPr;
 import org.docx4j.wml.TrPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** These is an utility class with some common functions for the 
  *  HTML-exporters and the SvgExporter.
@@ -46,7 +47,7 @@ import org.docx4j.wml.TrPr;
  */
 public class HtmlCssHelper {
 
-	private static Logger log = Logger.getLogger(HtmlCssHelper.class);
+	private static Logger log = LoggerFactory.getLogger(HtmlCssHelper.class);
 	
     public static void createCssForStyles(OpcPackage opcPackage, StyleTree styleTree, StringBuffer result) {
 

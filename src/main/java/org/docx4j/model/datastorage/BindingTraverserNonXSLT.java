@@ -9,12 +9,10 @@ import java.util.StringTokenizer;
 import javax.xml.bind.JAXBException;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
 import org.apache.xmlgraphics.image.loader.ImageSize;
 import org.docx4j.TraversalUtil;
 import org.docx4j.TraversalUtil.CallbackImpl;
 import org.docx4j.XmlUtils;
-import org.docx4j.dml.CTBlip;
 import org.docx4j.dml.CTPositiveSize2D;
 import org.docx4j.dml.wordprocessingDrawing.Anchor;
 import org.docx4j.dml.wordprocessingDrawing.Inline;
@@ -22,7 +20,6 @@ import org.docx4j.jaxb.Context;
 import org.docx4j.model.sdt.QueryString;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.CustomXmlPart;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPartAbstractImage;
@@ -30,9 +27,6 @@ import org.docx4j.openpackaging.parts.opendope.XPathsPart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.wml.Body;
 import org.docx4j.wml.CTDataBinding;
-import org.docx4j.wml.CTSdtContentCell;
-import org.docx4j.wml.CTSdtContentRow;
-import org.docx4j.wml.CTSdtContentRun;
 import org.docx4j.wml.CTSdtText;
 import org.docx4j.wml.Drawing;
 import org.docx4j.wml.P;
@@ -47,12 +41,12 @@ import org.docx4j.wml.Tag;
 import org.docx4j.wml.Tc;
 import org.docx4j.wml.Tr;
 import org.jvnet.jaxb2_commons.ppp.Child;
-import org.w3c.dom.Document;
-import org.w3c.dom.DocumentFragment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BindingTraverserNonXSLT implements BindingTraverserInterface {
 	
-	private static Logger log = Logger.getLogger(BindingTraverserNonXSLT.class);		
+	private static Logger log = LoggerFactory.getLogger(BindingTraverserNonXSLT.class);		
 	
 	JaxbXmlPart part;
 	org.docx4j.openpackaging.packages.OpcPackage pkg;
@@ -435,7 +429,7 @@ public class BindingTraverserNonXSLT implements BindingTraverserInterface {
 				}				
 				
 			} catch (Exception e) {
-				log.error(e);
+				log.error("", e);
 				return null;
 			}
 			

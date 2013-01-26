@@ -28,7 +28,6 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
 import org.docx4j.TraversalUtil.CallbackImpl;
 import org.docx4j.XmlUtils;
@@ -51,6 +50,8 @@ import org.docx4j.wml.TcPr;
 import org.docx4j.wml.TcPrInner.GridSpan;
 import org.docx4j.wml.TcPrInner.VMerge;
 import org.docx4j.wml.Tr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -90,7 +91,7 @@ import org.w3c.dom.NodeList;
 public class TableModel extends Model {
 	public static final String MODEL_ID = "w:tbl";
 	
-	private final static Logger log = Logger.getLogger(TableModel.class);
+	private final static Logger log = LoggerFactory.getLogger(TableModel.class);
 
 	public TableModel() {
 		resetIndexes();
@@ -795,7 +796,7 @@ public class TableModel extends Model {
 
 		for (int i = 0; i < children.getLength(); i++) {
 
-			log.debug(i);
+			log.debug("" + i);
 
 			log.debug(children.item(i).getTextContent());
 			log.debug(children.item(i).getLocalName());

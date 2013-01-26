@@ -34,9 +34,7 @@ import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.apache.xmlgraphics.fonts.Glyphs;
-
 import org.docx4j.fonts.fop.fonts.FontUtil;
 import org.docx4j.fonts.foray.font.format.Panose;
 

@@ -29,7 +29,6 @@ import java.util.Iterator;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.datastorage.BindingHandler;
@@ -54,11 +53,13 @@ import org.docx4j.openpackaging.parts.opendope.StandardisedAnswersPart;
 import org.docx4j.openpackaging.parts.opendope.XPathsPart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class Load {
 
-	private static Logger log = Logger.getLogger(Load.class);
+	private static Logger log = LoggerFactory.getLogger(Load.class);
 	
 
 

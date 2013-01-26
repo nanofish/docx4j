@@ -26,7 +26,6 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.docProps.extended.Properties;
 import org.docx4j.jaxb.Context;
@@ -34,6 +33,8 @@ import org.docx4j.jaxb.NamespacePrefixMappings;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 
@@ -61,7 +62,7 @@ public class DocPropsExtendedPart extends JaxbXmlPart<Properties> {
 	 */
 	
 	
-	private static Logger log = Logger.getLogger(DocPropsExtendedPart.class);
+	private static Logger log = LoggerFactory.getLogger(DocPropsExtendedPart.class);
 	
 	private static XPathFactory xPathFactory;
 	private static XPath xPath;

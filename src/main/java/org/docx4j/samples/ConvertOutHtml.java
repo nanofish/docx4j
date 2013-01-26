@@ -25,10 +25,10 @@ import java.io.OutputStream;
 
 import org.docx4j.convert.out.Containerization;
 import org.docx4j.convert.out.html.AbstractHtmlExporter;
+import org.docx4j.convert.out.html.AbstractHtmlExporter.HtmlSettings;
 import org.docx4j.convert.out.html.HtmlExporterNG2;
 import org.docx4j.convert.out.html.SdtWriter;
 import org.docx4j.convert.out.html.TagSingleBox;
-import org.docx4j.convert.out.html.AbstractHtmlExporter.HtmlSettings;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 
 /**

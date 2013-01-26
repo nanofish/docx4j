@@ -26,10 +26,9 @@ package org.docx4j.openpackaging;
 
 import static org.junit.Assert.*;
 
-import org.docx4j.openpackaging.parts.Part;
-import org.docx4j.openpackaging.parts.PartName;
-import org.junit.Test;
 import java.net.URI;
+
+import org.junit.Test;
 
 public class URIHelperTest {
 	

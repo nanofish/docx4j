@@ -1,7 +1,6 @@
 package org.docx4j.xpathextend.grammar;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 import org.docx4j.model.datastorage.XPathEnhancerParser;
 import org.junit.Test;

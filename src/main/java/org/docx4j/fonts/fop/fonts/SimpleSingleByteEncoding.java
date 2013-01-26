@@ -30,7 +30,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.xmlgraphics.fonts.Glyphs;
-
 import org.docx4j.fonts.fop.util.CharUtilities;
 
 /**

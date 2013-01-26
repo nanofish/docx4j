@@ -22,25 +22,23 @@ package org.docx4j.openpackaging.parts.WordprocessingML;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.poifs.dev.POIFSViewEngine;
-import org.apache.poi.poifs.filesystem.DocumentInputStream;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class OleObjectBinaryPart extends BinaryPart {
 
-	private static Logger log = Logger.getLogger(OleObjectBinaryPart.class);		
+	private static Logger log = LoggerFactory.getLogger(OleObjectBinaryPart.class);		
 	
 	public OleObjectBinaryPart(PartName partName) throws InvalidFormatException {
 		super(partName);

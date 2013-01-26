@@ -25,13 +25,13 @@
 
 package org.docx4j.fonts.fop.fonts.type1;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.DataInputStream;
-import java.io.BufferedInputStream;
 
-//Commons
 import org.apache.commons.io.IOUtils;
+//Commons
 
 /**
  * This class represents a parser for Adobe Type 1 PFB files.

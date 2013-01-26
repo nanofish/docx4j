@@ -59,7 +59,6 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.jaxb.Context;
 import org.docx4j.jaxb.NamespacePrefixMapperUtils;
 import org.docx4j.openpackaging.Base;
@@ -76,6 +75,8 @@ import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.relationships.Relationship;
 import org.docx4j.relationships.Relationships;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -84,7 +85,7 @@ import org.docx4j.relationships.Relationships;
  */
 public final class RelationshipsPart extends JaxbXmlPart<Relationships> { 
 
-	private static Logger log = Logger.getLogger(RelationshipsPart.class);
+	private static Logger log = LoggerFactory.getLogger(RelationshipsPart.class);
 	
 
 	/**
@@ -153,7 +154,7 @@ public final class RelationshipsPart extends JaxbXmlPart<Relationships> {
 			rp = new RelationshipsPart(sourcePart);
 		} catch (InvalidFormatException e) {
 			// shouldn't happen
-			log.error(e);
+			log.error("", e);
 		}
 		rp.setPackage(sourcePart.getPackage());
 
@@ -882,7 +883,7 @@ public final class RelationshipsPart extends JaxbXmlPart<Relationships> {
 			
 		} catch (JAXBException e) {
 //			e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
 		

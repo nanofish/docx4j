@@ -23,8 +23,8 @@
 
 package org.docx4j.fonts.fop.fonts;
 
-import java.util.Map;
 import java.util.Collections;
+import java.util.Map;
 
 public class CodePointMapping extends AbstractCodePointMapping {
 

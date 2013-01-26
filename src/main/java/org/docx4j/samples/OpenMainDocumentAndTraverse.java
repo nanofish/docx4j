@@ -26,8 +26,8 @@ import java.util.List;
 import javax.xml.bind.JAXBContext;
 
 import org.docx4j.TraversalUtil;
-import org.docx4j.XmlUtils;
 import org.docx4j.TraversalUtil.Callback;
+import org.docx4j.XmlUtils;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.docx4j.wml.Body;

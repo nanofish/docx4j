@@ -19,10 +19,10 @@
  */
 package org.docx4j.convert.out.html;
 
-import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.convert.out.AbstractConversionSettings;
 import org.docx4j.convert.out.AbstractMessageWriter;
 import org.docx4j.convert.out.AbstractModelRegistry;
+import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.convert.out.ConversionSectionWrappers;
 import org.docx4j.convert.out.html.AbstractHtmlExporter.HtmlSettings;
 import org.docx4j.fonts.Mapper;

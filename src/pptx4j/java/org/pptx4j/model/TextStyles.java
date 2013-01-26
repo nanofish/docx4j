@@ -24,12 +24,11 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
+import org.docx4j.dml.BaseStyles.FontScheme;
 import org.docx4j.dml.CTTextCharacterProperties;
 import org.docx4j.dml.CTTextListStyle;
 import org.docx4j.dml.CTTextParagraphProperties;
-import org.docx4j.dml.BaseStyles.FontScheme;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
@@ -46,14 +45,16 @@ import org.docx4j.wml.PPr;
 import org.docx4j.wml.RFonts;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.Style;
+import org.docx4j.wml.Style.Name;
 import org.docx4j.wml.U;
 import org.docx4j.wml.UnderlineEnumeration;
-import org.docx4j.wml.Style.Name;
 import org.pptx4j.pml.CTSlideMasterTextStyles;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TextStyles {
 	
-	private final static Logger log = Logger.getLogger(TextStyles.class);
+	private final static Logger log = LoggerFactory.getLogger(TextStyles.class);
 	
 	
 	/*

@@ -22,12 +22,14 @@
 package org.docx4j.vml.officedrawing;
 
 import java.math.BigInteger;
+
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
+
 import org.docx4j.vml.STExt;
 import org.jvnet.jaxb2_commons.ppp.Child;
 

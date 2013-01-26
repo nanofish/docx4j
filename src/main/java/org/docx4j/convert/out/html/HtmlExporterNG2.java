@@ -30,7 +30,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.URIResolver;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.log4j.Logger;
 import org.docx4j.Docx4jProperties;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.out.Containerization;
@@ -47,6 +46,8 @@ import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.docx4j.wml.PPr;
 import org.docx4j.wml.RPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
@@ -54,7 +55,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.w3c.dom.traversal.NodeIterator;
-import org.xml.sax.InputSource;
 
 /**
  * HtmlExporterNG (now removed - see 
@@ -98,7 +98,7 @@ import org.xml.sax.InputSource;
 public class HtmlExporterNG2 extends  AbstractHtmlExporter {
 	
 	
-	protected static Logger log = Logger.getLogger(HtmlExporterNG2.class);
+	protected static Logger log = LoggerFactory.getLogger(HtmlExporterNG2.class);
 	
 	public static void log(String message ) {
 		
@@ -468,7 +468,7 @@ public class HtmlExporterNG2 extends  AbstractHtmlExporter {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.toString() );
-			log.error(e);
+			log.error("", e);
 		} 
     	
     	return null;
@@ -574,7 +574,7 @@ public class HtmlExporterNG2 extends  AbstractHtmlExporter {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.toString() );
-			log.error(e);
+			log.error("", e);
 		} 
     	
     	return null;

@@ -32,9 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
-
 import org.apache.xmlgraphics.fonts.Glyphs;
-
 import org.docx4j.fonts.fop.fonts.BFEntry;
 import org.docx4j.fonts.fop.fonts.CIDFontType;
 import org.docx4j.fonts.fop.fonts.EncodingMode;

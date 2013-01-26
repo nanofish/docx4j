@@ -20,15 +20,16 @@
 
 package org.docx4j.openpackaging.parts.WordprocessingML;
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class VbaProjectBinaryPart extends BinaryPart {
 
-	private static Logger log = Logger.getLogger(VbaProjectBinaryPart.class);		
+	private static Logger log = LoggerFactory.getLogger(VbaProjectBinaryPart.class);		
 	
 	public VbaProjectBinaryPart(PartName partName) throws InvalidFormatException {
 		super(partName);

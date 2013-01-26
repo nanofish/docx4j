@@ -24,33 +24,24 @@ package org.docx4j.openpackaging.packages;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.StringWriter;
-import java.security.GeneralSecurityException;
 import java.util.HashMap;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.poifs.crypt.Decryptor;
 import org.apache.poi.poifs.crypt.EncryptionInfo;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.docx4j.TextUtils;
-import org.docx4j.XmlUtils;
 import org.docx4j.convert.in.FlatOpcXmlImporter;
 import org.docx4j.convert.out.flatOpcXml.FlatOpcXmlCreator;
 import org.docx4j.docProps.core.dc.elements.SimpleLiteral;
 import org.docx4j.jaxb.Context;
-import org.docx4j.jaxb.NamespacePrefixMapperUtils;
 import org.docx4j.openpackaging.Base;
 import org.docx4j.openpackaging.contenttype.ContentTypeManager;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
@@ -61,7 +52,6 @@ import org.docx4j.openpackaging.io3.Load3;
 import org.docx4j.openpackaging.io3.Save;
 import org.docx4j.openpackaging.io3.stores.PartStore;
 import org.docx4j.openpackaging.io3.stores.ZipPartStore;
-import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.CustomXmlPart;
 import org.docx4j.openpackaging.parts.DocPropsCorePart;
 import org.docx4j.openpackaging.parts.DocPropsCustomPart;
@@ -71,6 +61,8 @@ import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.Parts;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -80,7 +72,7 @@ import org.docx4j.openpackaging.parts.relationships.Namespaces;
  */
 public class OpcPackage extends Base {
 
-	private static Logger log = Logger.getLogger(OpcPackage.class);
+	private static Logger log = LoggerFactory.getLogger(OpcPackage.class);
 
 	/**
 	 * This HashMap is intended to prevent loops during the loading 
@@ -222,7 +214,7 @@ public class OpcPackage extends Base {
 		try {
 			return OpcPackage.load(new FileInputStream(docxFile), password );
 		} catch (final FileNotFoundException e) {
-			OpcPackage.log.error(e);
+			OpcPackage.log.error("", e);
 			throw new Docx4JException("Couldn't load file from " + docxFile.getAbsolutePath(), e);
 		}
 	}
@@ -370,7 +362,7 @@ public class OpcPackage extends Base {
 			FlatOpcXmlImporter xmlPackage = new FlatOpcXmlImporter(is); 
 			return xmlPackage.get(); 
 		} catch (final Exception e) {
-			OpcPackage.log.error(e);
+			OpcPackage.log.error("", e);
 			throw new Docx4JException("Couldn't load xml from stream ",e);
 		} 
 	}
@@ -536,7 +528,7 @@ public class OpcPackage extends Base {
 				core.setJaxbElement(coreFactory.createCoreProperties() );
 				this.addTargetPart(core);			
 			} catch (InvalidFormatException e) {
-				log.error(e);
+				log.error("", e);
 			}
 		}
 		
@@ -562,7 +554,7 @@ public class OpcPackage extends Base {
 		 try {
 			TextUtils.extractText(sl, sw, Context.jcDocPropsCore);
 		} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 		}
 		return sw.toString();				
 	}

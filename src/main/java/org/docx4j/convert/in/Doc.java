@@ -23,7 +23,6 @@ package org.docx4j.convert.in;
 
 import java.io.FileInputStream;
 
-import org.apache.log4j.Logger;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.usermodel.CharacterRun;
 import org.apache.poi.hwpf.usermodel.Paragraph;
@@ -35,6 +34,8 @@ import org.apache.poi.hwpf.usermodel.TableRow;
 import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author jason
@@ -42,7 +43,7 @@ import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
  */
 public class Doc {
 
-	private static Logger log = Logger.getLogger(Doc.class);
+	private static Logger log = LoggerFactory.getLogger(Doc.class);
 
 	/**
 	 * @param in doc file

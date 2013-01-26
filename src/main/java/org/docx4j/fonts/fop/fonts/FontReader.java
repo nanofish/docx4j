@@ -33,15 +33,14 @@ import java.util.Set;
 
 import javax.xml.parsers.SAXParserFactory;
 
+import org.docx4j.fonts.fop.apps.FOPException;
+import org.docx4j.fonts.fop.fonts.apps.TTFReader;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.Locator;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
-
-import org.docx4j.fonts.fop.apps.FOPException;
-import org.docx4j.fonts.fop.fonts.apps.TTFReader;
 
 /**
  * Class for reading a metric.xml file and creating a font object.

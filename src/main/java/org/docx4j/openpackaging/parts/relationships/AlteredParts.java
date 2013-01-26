@@ -27,7 +27,6 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.convert.out.flatOpcXml.FlatOpcXmlCreator;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
@@ -35,6 +34,8 @@ import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPart;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Output is Flat OPC XML format:
@@ -50,7 +51,7 @@ import org.docx4j.relationships.Relationship;
  */
 public class AlteredParts {
 	
-	private static Logger log = Logger.getLogger(AlteredParts.class);
+	private static Logger log = LoggerFactory.getLogger(AlteredParts.class);
 		
 	public static Alterations start(
 									WordprocessingMLPackage thisPackage, 

@@ -23,17 +23,18 @@ package org.docx4j.openpackaging.parts;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.dml.Theme;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
 public final class ThemePart extends JaxbXmlPart<Theme> {
 	
-	private static Logger log = Logger.getLogger(ThemePart.class);		
+	private static Logger log = LoggerFactory.getLogger(ThemePart.class);		
 	
 	public ThemePart(PartName partName) throws InvalidFormatException {
 		super(partName);

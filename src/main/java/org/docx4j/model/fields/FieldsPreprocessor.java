@@ -1,10 +1,7 @@
 package org.docx4j.model.fields;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -17,21 +14,19 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.log4j.Logger;
-import org.docx4j.TraversalUtil;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.opendope.XPathsPart;
-import org.docx4j.wml.ContentAccessor;
 import org.docx4j.wml.FldChar;
 import org.docx4j.wml.P;
 import org.docx4j.wml.R;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.STFldCharType;
 import org.docx4j.wml.Text;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class puts fields into a "canonical" representation
@@ -46,7 +41,7 @@ import org.docx4j.wml.Text;
  */
 public class FieldsPreprocessor {
 	
-	private static Logger log = Logger.getLogger(FieldsPreprocessor.class);		
+	private static Logger log = LoggerFactory.getLogger(FieldsPreprocessor.class);		
 
     private final static QName _RInstrText_QNAME = new QName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", 
     		"instrText");

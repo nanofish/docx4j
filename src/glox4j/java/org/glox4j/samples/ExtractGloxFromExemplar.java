@@ -2,33 +2,21 @@ package org.glox4j.samples;
 
 import java.util.Map.Entry;
 
-import javax.xml.bind.JAXBElement;
-
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
-import org.docx4j.dml.diagram.CTDataModel;
 import org.docx4j.dml.diagram.CTDescription;
 import org.docx4j.dml.diagram.CTDiagramDefinitionHeader;
-import org.docx4j.dml.diagram.CTElemPropSet;
 import org.docx4j.dml.diagram.CTName;
-import org.docx4j.dml.diagram.CTPt;
-import org.docx4j.dml.diagram.CTSampleData;
 import org.docx4j.dml.diagram.ObjectFactory;
-import org.docx4j.dml.wordprocessingDrawing.Inline;
-import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.contenttype.ContentTypes;
 import org.docx4j.openpackaging.packages.OpcPackage;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramColorsPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramDataPart;
 import org.docx4j.openpackaging.parts.DrawingML.DiagramLayoutHeaderPart;
 import org.docx4j.openpackaging.parts.DrawingML.DiagramLayoutPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramStylePart;
 import org.docx4j.samples.AbstractSample;
-import org.docx4j.wml.P;
 import org.glox4j.openpackaging.packages.GloxPackage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This sample can be used to generate a
@@ -43,7 +31,7 @@ import org.glox4j.openpackaging.packages.GloxPackage;
  */
 public class ExtractGloxFromExemplar extends AbstractSample {
 	
-	private static Logger log = Logger.getLogger(ExtractGloxFromExemplar.class);						
+	private static Logger log = LoggerFactory.getLogger(ExtractGloxFromExemplar.class);						
 
 	/**
 	 * @param args

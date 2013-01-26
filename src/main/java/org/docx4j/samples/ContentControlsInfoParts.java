@@ -25,23 +25,18 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import javax.xml.bind.JAXBElement;
-
-import org.apache.log4j.Logger;
-import org.docx4j.XmlUtils;
-import org.docx4j.openpackaging.contenttype.ContentTypeManager;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.CustomXmlDataStoragePropertiesPart;
 import org.docx4j.openpackaging.parts.Part;
-import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.PartName;
-import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPart;
 import org.docx4j.openpackaging.parts.opendope.JaxbCustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -53,7 +48,7 @@ import org.docx4j.relationships.Relationship;
  */
 public class ContentControlsInfoParts extends AbstractSample {
 	
-	private static Logger log = Logger.getLogger(ContentControlsInfoParts.class);						
+	private static Logger log = LoggerFactory.getLogger(ContentControlsInfoParts.class);						
 
 	/**
 	 * @param args

@@ -4,15 +4,14 @@ import java.util.List;
 
 import javax.xml.bind.Binder;
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
-import javax.xml.namespace.QName;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.jaxb.JaxbValidationEventHandler;
 import org.docx4j.wml.P;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 /**
@@ -26,7 +25,7 @@ import org.w3c.dom.Node;
  */
 public class XPathAwareCloner {
 	
-	private static Logger log = Logger.getLogger(XPathAwareCloner.class);	
+	private static Logger log = LoggerFactory.getLogger(XPathAwareCloner.class);	
 			
 	/** Clone this JAXB object, using default JAXBContext. */ 
 	public Object deepCopy(Object o) {		

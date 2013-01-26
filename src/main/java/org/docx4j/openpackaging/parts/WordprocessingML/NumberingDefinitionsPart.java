@@ -26,23 +26,14 @@ import java.math.BigInteger;
 import java.util.HashMap;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.UnmarshalException;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.util.JAXBResult;
-import javax.xml.transform.Templates;
-import javax.xml.transform.dom.DOMResult;
-import javax.xml.transform.stream.StreamSource;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
-import org.docx4j.jaxb.JaxbValidationEventHandler;
 import org.docx4j.model.PropertyResolver;
 import org.docx4j.model.listnumbering.AbstractListNumberingDefinition;
 import org.docx4j.model.listnumbering.Emulator;
 import org.docx4j.model.listnumbering.ListLevel;
 import org.docx4j.model.listnumbering.ListNumberingDefinition;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.exceptions.InvalidOperationException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
@@ -57,14 +48,14 @@ import org.docx4j.wml.Numbering.Num.LvlOverride;
 import org.docx4j.wml.Numbering.Num.LvlOverride.StartOverride;
 import org.docx4j.wml.PPrBase.Ind;
 import org.docx4j.wml.PPrBase.NumPr;
-import org.docx4j.wml.PPrBase.NumPr.Ilvl;
-import org.docx4j.wml.PPrBase.NumPr.NumId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
 public final class NumberingDefinitionsPart extends JaxbXmlPart<Numbering> {
 	
-	private static Logger log = Logger.getLogger(NumberingDefinitionsPart.class);	
+	private static Logger log = LoggerFactory.getLogger(NumberingDefinitionsPart.class);	
 	
 	public NumberingDefinitionsPart(PartName partName) throws InvalidFormatException {
 		super(partName);

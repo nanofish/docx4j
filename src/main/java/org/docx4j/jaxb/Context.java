@@ -32,9 +32,9 @@ import java.util.jar.Manifest;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
-import org.docx4j.utils.Log4jConfigurator;
 import org.docx4j.utils.ResourceUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Context {
 	
@@ -54,13 +54,13 @@ public class Context {
 
 	public static JAXBContext jcXmlDSig;
 	
-	private static Logger log = Logger.getLogger(Context.class);
+	private static Logger log = LoggerFactory.getLogger(Context.class);
 	
 	private static boolean MOXy_intended = false;
 	
 	static {
 	  
-		Log4jConfigurator.configure();
+		//Log4jConfigurator.configure();
 		
 		// Display diagnostic info about version of JAXB being used.
 		log.info("java.vendor="+System.getProperty("java.vendor"));
@@ -220,7 +220,7 @@ public class Context {
 	            }
 	            catch (Exception e) {
 	                // Silently ignore 
-//	            	log.error(e);
+//	            	log.error("", e);
 	            }
 	        }
 	    } catch (IOException e1) {

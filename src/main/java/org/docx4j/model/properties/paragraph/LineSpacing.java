@@ -24,7 +24,6 @@ import java.math.BigInteger;
 import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.jaxb.Context;
 import org.docx4j.wml.PPr;
-import org.docx4j.wml.PPrBase.Ind;
 import org.docx4j.wml.PPrBase.Spacing;
 import org.w3c.dom.Element;
 import org.w3c.dom.css.CSSPrimitiveValue;

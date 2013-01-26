@@ -24,7 +24,6 @@ limitations under the License.
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.WordprocessingML.FooterPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
@@ -35,10 +34,12 @@ import org.docx4j.wml.FooterReference;
 import org.docx4j.wml.HdrFtrRef;
 import org.docx4j.wml.HeaderReference;
 import org.docx4j.wml.SectPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HeaderFooterPolicy {
 
-	protected static Logger log = Logger.getLogger(HeaderFooterPolicy.class);	
+	protected static Logger log = LoggerFactory.getLogger(HeaderFooterPolicy.class);	
 	
 	private HeaderPart firstHeaderActive;
 	private HeaderPart firstHeaderActual;  // Need this so it can be copied in next section, even if not used in this one

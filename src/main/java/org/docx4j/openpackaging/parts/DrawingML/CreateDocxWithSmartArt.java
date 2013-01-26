@@ -21,31 +21,21 @@
 package org.docx4j.openpackaging.parts.DrawingML;
 
 import java.io.File;
-import java.math.BigInteger;
 
-import javax.xml.bind.util.JAXBResult;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.Source;
 import javax.xml.transform.Templates;
 import javax.xml.transform.stream.StreamSource;
 
 import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.XmlUtils;
-import org.docx4j.dml.diagram.CTDataModel;
 import org.docx4j.dml.diagram.CTDiagramDefinition;
-import org.docx4j.jaxb.Context;
 import org.docx4j.model.structure.MarginsWellKnown;
 import org.docx4j.model.structure.PageDimensions;
 import org.docx4j.model.structure.PageSizePaper;
-import org.docx4j.openpackaging.io.LoadFromZipNG;
 import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramColorsPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramDataPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramLayoutPart;
-import org.docx4j.openpackaging.parts.DrawingML.DiagramStylePart;
 import org.docx4j.wml.P;
 import org.docx4j.wml.SectPr.PgSz;
 import org.glox4j.openpackaging.packages.GloxPackage;

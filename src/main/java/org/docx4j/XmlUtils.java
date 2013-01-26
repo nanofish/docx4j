@@ -28,7 +28,6 @@ import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +45,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.ErrorListener;
-import javax.xml.transform.Result;
 import javax.xml.transform.Templates;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -60,15 +58,13 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.log4j.Logger;
-import org.apache.xalan.trace.PrintTraceListener;
-import org.apache.xalan.trace.TraceManager;
-import org.apache.xalan.transformer.TransformerImpl;
 import org.docx4j.jaxb.Context;
 import org.docx4j.jaxb.JaxbValidationEventHandler;
 import org.docx4j.jaxb.NamespacePrefixMapperUtils;
 import org.docx4j.jaxb.NamespacePrefixMappings;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -79,7 +75,7 @@ import org.xml.sax.SAXException;
 
 public class XmlUtils {
 	
-	private static Logger log = Logger.getLogger(XmlUtils.class);	
+	private static Logger log = LoggerFactory.getLogger(XmlUtils.class);	
 		
 	// See http://www.edankert.com/jaxpimplementations.html for
 	// a helpful list.
@@ -992,7 +988,7 @@ public class XmlUtils {
             }
             return result;
         } catch (XPathExpressionException e) {
-            log.error(e);
+            log.error("", e);
             throw new RuntimeException(e);
         }
     }	

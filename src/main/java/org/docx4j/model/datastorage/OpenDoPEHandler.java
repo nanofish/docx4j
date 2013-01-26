@@ -1,6 +1,6 @@
 package org.docx4j.model.datastorage;
 
-import static org.docx4j.model.datastorage.XPathEnhancerParser.enhanceXPath;
+import static org.docx4j.model.datastorage.XPathEnhancerParser.*;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 import javax.xml.namespace.NamespaceContext;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
@@ -29,7 +28,6 @@ import org.docx4j.openpackaging.contenttype.ContentType;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.CustomXmlPart;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.WordprocessingML.AlternativeFormatInputPart;
@@ -49,21 +47,21 @@ import org.docx4j.wml.CTSdtContentCell;
 import org.docx4j.wml.ContentAccessor;
 import org.docx4j.wml.P;
 import org.docx4j.wml.PPr;
-import org.docx4j.wml.R;
 import org.docx4j.wml.SdtElement;
 import org.docx4j.wml.SdtPr;
 import org.docx4j.wml.SectPr;
 import org.docx4j.wml.Tag;
 import org.docx4j.wml.Tc;
 import org.docx4j.wml.TcPr;
-import org.docx4j.wml.Text;
 import org.jvnet.jaxb2_commons.ppp.Child;
 import org.opendope.conditions.Condition;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 public class OpenDoPEHandler {
 
-	private static Logger log = Logger.getLogger(OpenDoPEHandler.class);
+	private static Logger log = LoggerFactory.getLogger(OpenDoPEHandler.class);
 
 	public OpenDoPEHandler(WordprocessingMLPackage wordMLPackage)
 			throws Docx4JException {
@@ -563,7 +561,7 @@ public class OpenDoPEHandler {
 	 */
 	private class ShallowTraversor implements TraversalUtil.Callback {
 
-		// private static Logger log = Logger.getLogger(ShallowTraversor.class);
+		// private static Logger log = LoggerFactory.getLogger(ShallowTraversor.class);
 
 		WordprocessingMLPackage wordMLPackage;
 
@@ -963,7 +961,7 @@ public class OpenDoPEHandler {
 		final Matcher stripPatternMatcher = stripRepeatArgPattern
 				.matcher(tagVal);
 		if (!stripPatternMatcher.matches()) {
-			log.fatal("Cannot find repeat tag in sdtPr/tag while processing repeat, sth's very wrong with "
+			log.error("Cannot find repeat tag in sdtPr/tag while processing repeat, sth's very wrong with "
 					+ tagVal);
 			return;
 		}
@@ -976,7 +974,7 @@ public class OpenDoPEHandler {
 
 	class DeepTraversor implements TraversalUtil.Callback {
 
-		// private static Logger log = Logger.getLogger(DeepTraversor.class);
+		// private static Logger log = LoggerFactory.getLogger(DeepTraversor.class);
 
 		int index = 0;
 		String xpathBase = null;
@@ -1307,7 +1305,7 @@ public class OpenDoPEHandler {
 		try {
 			return part.xpathGetNodes(xpath, prefixMappings);
 		} catch (Docx4JException e) {
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 	}

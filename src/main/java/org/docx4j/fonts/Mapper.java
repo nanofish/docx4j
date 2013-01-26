@@ -23,7 +23,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Maps font names used in the document to 
@@ -59,7 +60,7 @@ import org.apache.log4j.Logger;
 public abstract class Mapper {
 	
 	
-	protected static Logger log = Logger.getLogger(Mapper.class);
+	protected static Logger log = LoggerFactory.getLogger(Mapper.class);
 
 	public Mapper() {
 		super();

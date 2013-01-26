@@ -1,6 +1,6 @@
 package org.docx4j.openpackaging.parts.WordprocessingML;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.util.List;
 

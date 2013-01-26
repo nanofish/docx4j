@@ -26,9 +26,6 @@ import java.io.OutputStream;
 import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
 import java.nio.ByteBuffer;
-import java.util.zip.ZipFile;
-
-import javax.xml.bind.JAXBException;
 
 import org.apache.commons.io.IOUtils;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
@@ -71,7 +68,7 @@ public class BinaryPart extends Part {
 			log.debug(".. done" );
 		} catch (IOException e) {
 			//e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 		} finally {
 			try {
 				log.debug("closing binary input stream");
@@ -79,7 +76,7 @@ public class BinaryPart extends Part {
 				log.info(".. closed.");
 			} catch (Exception nested) {
 				// ignored
-				log.error(nested);				
+				log.error("", nested);				
 			}
 		}
 	}	
@@ -139,9 +136,9 @@ public class BinaryPart extends Part {
 						this.bbRef = new SoftReference<ByteBuffer>(res);
 					}
 				} catch (Docx4JException e) {
-					log.error(e);
+					log.error("", e);
 				} catch (IOException e) {
-					log.error(e);
+					log.error("", e);
 				} finally {
 					IOUtils.closeQuietly(in);
 	//				if (zf != null) {

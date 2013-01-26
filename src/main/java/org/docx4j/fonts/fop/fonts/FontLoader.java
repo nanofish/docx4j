@@ -36,7 +36,6 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.docx4j.fonts.fop.fonts.truetype.TTFFontLoader;
 import org.docx4j.fonts.fop.fonts.type1.Type1FontLoader;
 

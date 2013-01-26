@@ -27,12 +27,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.sdt.QueryString;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.wml.SdtPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Node;
@@ -40,7 +41,7 @@ import org.w3c.dom.traversal.NodeIterator;
 
 public class SdtWriter {
 	
-	private static Logger log = Logger.getLogger(SdtWriter.class);		
+	private static Logger log = LoggerFactory.getLogger(SdtWriter.class);		
 	
 	private static Map<String, SdtTagHandler> handlers = new HashMap<String, SdtTagHandler>();
 	

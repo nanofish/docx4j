@@ -37,7 +37,6 @@ import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 
-import org.apache.log4j.Logger;
 import org.apache.xmlgraphics.image.loader.ImageInfo;
 import org.apache.xmlgraphics.image.loader.ImageManager;
 import org.apache.xmlgraphics.image.loader.ImageSessionContext;
@@ -46,7 +45,6 @@ import org.apache.xmlgraphics.image.loader.impl.DefaultImageContext;
 import org.apache.xmlgraphics.image.loader.impl.DefaultImageSessionContext;
 import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.dml.picture.Pic;
-import org.docx4j.dml.wordprocessingDrawing.Anchor;
 import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.model.structure.PageDimensions;
 import org.docx4j.model.structure.SectionWrapper;
@@ -64,10 +62,12 @@ import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class BinaryPartAbstractImage extends BinaryPart {
 	
-	protected static Logger log = Logger.getLogger(BinaryPartAbstractImage.class);
+	protected static Logger log = LoggerFactory.getLogger(BinaryPartAbstractImage.class);
 	final static String IMAGE_DIR_PREFIX = "/word/media/";
 	final static String IMAGE_NAME_PREFIX = "image";
 	

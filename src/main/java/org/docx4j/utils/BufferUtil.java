@@ -5,9 +5,6 @@ import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.Channels;
@@ -16,12 +13,13 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class BufferUtil {
 
-	private static Logger log = Logger.getLogger(BufferUtil.class);		
+	private static Logger log = LoggerFactory.getLogger(BufferUtil.class);		
 	
 	
     private static final int BUFFER_SIZE = 1024;

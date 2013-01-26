@@ -25,7 +25,6 @@ import java.util.HashMap;
 
 import javax.xml.bind.JAXBElement;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.openpackaging.contenttype.ContentTypeManager;
 import org.docx4j.openpackaging.packages.OpcPackage;
@@ -33,11 +32,13 @@ import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class PartsList extends AbstractSample {
 	
-	private static Logger log = Logger.getLogger(PartsList.class);						
+	private static Logger log = LoggerFactory.getLogger(PartsList.class);						
 
 	/**
 	 * @param args

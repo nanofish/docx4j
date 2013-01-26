@@ -38,7 +38,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.transform.Source;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.jaxb.Context;
@@ -95,6 +94,8 @@ import org.docx4j.wml.TcPrInner.GridSpan;
 import org.docx4j.wml.TcPrInner.VMerge;
 import org.docx4j.wml.Text;
 import org.docx4j.wml.Tr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -138,7 +139,7 @@ import org.xml.sax.InputSource;
  */
 public class XHTMLImporter {
 	
-	public static Logger log = Logger.getLogger(XHTMLImporter.class);		
+	public static Logger log = LoggerFactory.getLogger(XHTMLImporter.class);		
 	    
 	/**
 	 * Configure, how the Importer styles hyperlinks
@@ -1083,7 +1084,7 @@ public class XHTMLImporter {
 		} catch (JAXBException je) {
 			// Shouldn't happen
 			je.printStackTrace();
-			log.error(e);
+			log.error("", e);
 		}
 
 		if (num==null) {

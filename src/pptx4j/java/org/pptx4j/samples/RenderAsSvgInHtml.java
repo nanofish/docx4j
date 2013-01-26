@@ -24,15 +24,12 @@ package org.pptx4j.samples;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.docx4j.XmlUtils;
-import org.pptx4j.jaxb.Context;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.pptx4j.convert.out.svginhtml.SvgExporter;
-import org.pptx4j.model.ResolvedLayout;
-import org.pptx4j.pml.GroupShape;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -42,7 +39,7 @@ import org.pptx4j.pml.GroupShape;
  */
 public class RenderAsSvgInHtml  {
 	
-	protected static Logger log = Logger.getLogger(RenderAsSvgInHtml.class);
+	protected static Logger log = LoggerFactory.getLogger(RenderAsSvgInHtml.class);
 
 	public static void main(String[] args) throws Exception {
 	

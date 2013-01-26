@@ -20,25 +20,18 @@
 
 package org.docx4j.convert.out.flatOpcXml;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.zip.ZipEntry;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.out.Output;
 import org.docx4j.jaxb.Context;
@@ -51,8 +44,9 @@ import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPart;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
-import org.docx4j.relationships.Relationships;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 
 /**
@@ -86,7 +80,7 @@ import org.w3c.dom.Document;
  */
 public class FlatOpcXmlCreator implements Output {
 	
-	private static Logger log = Logger.getLogger(FlatOpcXmlCreator.class);				
+	private static Logger log = LoggerFactory.getLogger(FlatOpcXmlCreator.class);				
 	
 	public FlatOpcXmlCreator(OpcPackage p) {
 		
@@ -244,7 +238,7 @@ public class FlatOpcXmlCreator implements Output {
 				log.info( "PUT SUCCESS: " + partName);		
 			} catch (Exception e) {
 				e.printStackTrace();
-				log.error(e);
+				log.error("", e);
 				throw new Docx4JException("Problem saving part " + partName, e);
 			} 		        
 		} else if (part instanceof org.docx4j.openpackaging.parts.CustomXmlDataStoragePart) {
@@ -255,7 +249,7 @@ public class FlatOpcXmlCreator implements Output {
 				log.info("PUT SUCCESS: " + partName);
 			} catch (Exception e) {
 				e.printStackTrace();
-				log.error(e);
+				log.error("", e);
 				throw new Docx4JException("Problem saving part " + partName, e);
 			} 		        
 							
@@ -465,7 +459,7 @@ public class FlatOpcXmlCreator implements Output {
 					+ "</pkg:binaryData>" + "</pkg:part>";
 		} catch (UnsupportedEncodingException e) {
 			// I assume system supports UTF-8 !!
-			log.error(e);
+			log.error("", e);
 			return null;
 		}
 		

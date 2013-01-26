@@ -2,13 +2,14 @@ package org.pptx4j.convert.out.svginhtml;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.dml.CTBlip;
 import org.docx4j.dml.CTPoint2D;
 import org.docx4j.dml.CTPositiveSize2D;
 import org.docx4j.model.images.AbstractWordXmlPicture;
 import org.docx4j.openpackaging.parts.Part;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -54,7 +55,7 @@ public class PictureExporter extends AbstractWordXmlPicture {
             
             	 */
 
-	protected static Logger log = Logger.getLogger(PictureExporter.class);	
+	protected static Logger log = LoggerFactory.getLogger(PictureExporter.class);	
 
 	public static DocumentFragment createHtmlImg(
 			SvgConversionContext context,

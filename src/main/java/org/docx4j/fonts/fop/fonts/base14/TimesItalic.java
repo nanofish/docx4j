@@ -9,7 +9,6 @@ package org.docx4j.fonts.fop.fonts.base14;
 
 
 import java.util.Map;
-
 import java.util.Set;
 
 import org.docx4j.fonts.fop.fonts.Base14Font;

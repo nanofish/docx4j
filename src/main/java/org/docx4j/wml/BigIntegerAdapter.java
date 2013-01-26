@@ -1,6 +1,7 @@
 package org.docx4j.wml;
 
 import java.math.BigInteger;
+
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 public class BigIntegerAdapter extends XmlAdapter<String,BigInteger> {

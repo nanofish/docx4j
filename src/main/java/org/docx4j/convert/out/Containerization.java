@@ -24,23 +24,24 @@ import java.util.List;
 
 import javax.xml.bind.JAXBElement;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.wml.Body;
 import org.docx4j.wml.CTBorder;
 import org.docx4j.wml.CTShd;
 import org.docx4j.wml.P;
+import org.docx4j.wml.PPrBase.PBdr;
 import org.docx4j.wml.R;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.SdtBlock;
 import org.docx4j.wml.SdtContentBlock;
 import org.docx4j.wml.SdtPr;
 import org.docx4j.wml.Tag;
-import org.docx4j.wml.PPrBase.PBdr;
 import org.docx4j.wml.Tbl;
 import org.docx4j.wml.Tc;
 import org.docx4j.wml.Tr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author jharrop, alberto
@@ -48,7 +49,7 @@ import org.docx4j.wml.Tr;
  */
 public class Containerization {
 
-	private static Logger log = Logger.getLogger(Containerization.class);
+	private static Logger log = LoggerFactory.getLogger(Containerization.class);
 
 	public final static String TAG_SHADING = "XSLT_Shd";
 	public final static String TAG_BORDERS = "XSLT_PBdr";

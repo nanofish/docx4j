@@ -15,12 +15,8 @@
  */
 package org.docx4j.model.datastorage;
 
-import static org.docx4j.XmlUtils.getTransformerTemplate;
-import static org.docx4j.XmlUtils.marshaltoW3CDomDocument;
-import static org.docx4j.XmlUtils.prepareJAXBResult;
-import static org.docx4j.XmlUtils.transform;
-import static org.docx4j.model.datastorage.RemovalHandler.Quantifier.ALL;
-import static org.docx4j.model.datastorage.RemovalHandler.Quantifier.NAMED;
+import static org.docx4j.XmlUtils.*;
+import static org.docx4j.model.datastorage.RemovalHandler.Quantifier.*;
 
 import java.io.InputStream;
 import java.util.HashMap;

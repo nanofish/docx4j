@@ -22,6 +22,7 @@ package org.docx4j.wml;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -31,10 +32,12 @@ import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
+
 import org.docx4j.math.CTOMath;
 import org.docx4j.math.CTOMathPara;
-import org.apache.log4j.Logger;
 import org.jvnet.jaxb2_commons.ppp.Child;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -62,7 +65,7 @@ import org.jvnet.jaxb2_commons.ppp.Child;
 public class SdtContentBlock
     implements Child, ContentAccessor
 {
-	private static Logger log = Logger.getLogger(SdtContentBlock.class);	
+	private static Logger log = LoggerFactory.getLogger(SdtContentBlock.class);	
 	
     @XmlElementRefs({
         @XmlElementRef(name = "customXmlMoveToRangeStart", namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main", type = JAXBElement.class),

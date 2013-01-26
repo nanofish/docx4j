@@ -23,9 +23,9 @@ package org.xlsx4j.jaxb;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.jaxb.NamespacePrefixMapperUtils;
-import org.docx4j.utils.Log4jConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Context {
 	
@@ -39,11 +39,11 @@ public class Context {
 	
 	public static JAXBContext jcSML;
 	
-	private static Logger log = Logger.getLogger(Context.class);
+	private static Logger log = LoggerFactory.getLogger(Context.class);
 	
 	static {
 
-		Log4jConfigurator.configure();
+		//Log4jConfigurator.configure();
 		
 		// Display diagnostic info about version of JAXB being used.
 		Object namespacePrefixMapper;

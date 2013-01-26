@@ -19,17 +19,11 @@
  */
 package org.docx4j.openpackaging.parts;
 
-import java.io.IOException;
-
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.transform.Source;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.docProps.core.CoreProperties;
 import org.docx4j.jaxb.Context;
@@ -37,8 +31,9 @@ import org.docx4j.jaxb.NamespacePrefixMappings;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 
 public class DocPropsCorePart extends JaxbXmlPart<CoreProperties> {
@@ -60,7 +55,7 @@ public class DocPropsCorePart extends JaxbXmlPart<CoreProperties> {
 	 */
 	
 	
-	private static Logger log = Logger.getLogger(DocPropsCorePart.class);
+	private static Logger log = LoggerFactory.getLogger(DocPropsCorePart.class);
 	
 	private static XPathFactory xPathFactory;
 	private static XPath xPath;

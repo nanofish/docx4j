@@ -13,7 +13,6 @@ import javax.xml.transform.Templates;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.out.AbstractConversionSettings;
 import org.docx4j.convert.out.html.HtmlCssHelper;
@@ -40,6 +39,8 @@ import org.pptx4j.model.ResolvedLayout;
 import org.pptx4j.model.TextStyles;
 import org.pptx4j.pml.CxnSp;
 import org.pptx4j.pml.GroupShape;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
@@ -64,7 +65,7 @@ public class SvgExporter {
 	
 	// NB: file suffix must end with .xhtml in order to see the SVG in a browser
 	
-	protected static Logger log = Logger.getLogger(SvgExporter.class);	
+	protected static Logger log = LoggerFactory.getLogger(SvgExporter.class);	
 
 	public static JAXBContext jcSVG;	
     static ObjectFactory oFactory;
@@ -309,7 +310,7 @@ public class SvgExporter {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.toString() );
-			log.error(e);
+			log.error("", e);
 		} 
     	
     	return null;
@@ -393,7 +394,7 @@ public class SvgExporter {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 			// If something went wrong with the formatting,
 			// still try to display the text!
 			Node n = childResults.nextNode();
@@ -498,7 +499,7 @@ public class SvgExporter {
     			}
     		}
     	} catch (Exception e) {
-			log.error(e);
+			log.error("", e);
 			d=makeErr(e.getMessage() );
 		}
     	

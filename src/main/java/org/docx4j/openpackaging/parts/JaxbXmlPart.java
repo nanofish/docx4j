@@ -21,7 +21,6 @@ package org.docx4j.openpackaging.parts;
 
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 
 import javax.xml.bind.JAXBContext;
@@ -33,7 +32,6 @@ import javax.xml.bind.util.JAXBResult;
 import javax.xml.transform.Templates;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.jaxb.Context;
 import org.docx4j.jaxb.JaxbValidationEventHandler;
@@ -41,7 +39,8 @@ import org.docx4j.jaxb.NamespacePrefixMapperUtils;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.io3.stores.PartStore;
-import org.docx4j.wml.Numbering;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** OPC Parts are either XML, or binary (or text) documents.
  * 
@@ -68,7 +67,7 @@ import org.docx4j.wml.Numbering;
  * */
 public abstract class JaxbXmlPart<E> extends Part {
 	
-	protected static Logger log = Logger.getLogger(JaxbXmlPart.class);
+	protected static Logger log = LoggerFactory.getLogger(JaxbXmlPart.class);
 	
 	// This class is abstract
 	// Most applications ought to be able to instantiate
@@ -118,9 +117,9 @@ public abstract class JaxbXmlPart<E> extends Part {
 					unmarshal( is );
 				}
 			} catch (JAXBException e) {
-				log.error(e);
+				log.error("", e);
 			} catch (Docx4JException e) {
-				log.error(e);
+				log.error("", e);
 			}
 		}
 		return jaxbElement;
@@ -183,7 +182,7 @@ public abstract class JaxbXmlPart<E> extends Part {
 
 		} catch (JAXBException e) {
 //			e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
 	}
@@ -231,7 +230,7 @@ public abstract class JaxbXmlPart<E> extends Part {
 
 		} catch (JAXBException e) {
 			//e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
 	}
@@ -289,7 +288,7 @@ public abstract class JaxbXmlPart<E> extends Part {
 					}
 											
 				} else {
-					log.error(ue);
+					log.error("", ue);
 					log.error(".. and mark not supported");
 					throw ue;
 				}
@@ -297,7 +296,7 @@ public abstract class JaxbXmlPart<E> extends Part {
 			
 
 		} catch (JAXBException e ) {
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
     	
@@ -343,7 +342,7 @@ public abstract class JaxbXmlPart<E> extends Part {
 			return jaxbElement;
 			
 		} catch (JAXBException e) {
-			log.error(e);
+			log.error("", e);
 			throw e;
 		}
 	}	

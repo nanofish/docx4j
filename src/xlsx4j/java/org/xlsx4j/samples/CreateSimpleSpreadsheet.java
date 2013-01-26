@@ -8,7 +8,6 @@ import org.xlsx4j.jaxb.Context;
 import org.xlsx4j.sml.Cell;
 import org.xlsx4j.sml.Row;
 import org.xlsx4j.sml.SheetData;
-import org.xlsx4j.sml.Worksheet;
 
 public class CreateSimpleSpreadsheet {
 	

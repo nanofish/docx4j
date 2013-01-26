@@ -36,7 +36,6 @@ import java.util.Map;
 import java.util.Stack;
 
 import org.apache.commons.io.IOUtils;
-
 import org.docx4j.fonts.fop.fonts.NamedCharacter;
 
 /**

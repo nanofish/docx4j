@@ -27,10 +27,8 @@ import java.util.TreeMap;
 import javax.xml.bind.JAXBElement;
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.UnitsOfMeasurement;
 import org.docx4j.XmlUtils;
-import org.docx4j.convert.out.ModelConverter;
 import org.docx4j.jaxb.Context;
 import org.docx4j.model.Model;
 import org.docx4j.model.TransformState;
@@ -63,6 +61,7 @@ import org.docx4j.wml.TblBorders;
 import org.docx4j.wml.TblGridCol;
 import org.docx4j.wml.TcPr;
 import org.docx4j.wml.TrPr;
+import org.slf4j.Logger;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;

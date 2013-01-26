@@ -1,6 +1,7 @@
 package org.docx4j.dml.chart;
 
 import java.util.List;
+
 import org.docx4j.dml.CTShapeProperties;
 
 /**

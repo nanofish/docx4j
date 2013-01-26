@@ -51,8 +51,8 @@ package org.docx4j.openpackaging.parts;
 
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
-import org.docx4j.openpackaging.packages.OpcPackage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A collection of all the parts in the package
@@ -62,7 +62,7 @@ import org.docx4j.openpackaging.packages.OpcPackage;
  */
 public class Parts {
 
-	private static Logger log = Logger.getLogger(Parts.class);
+	private static Logger log = LoggerFactory.getLogger(Parts.class);
 
 	private HashMap<PartName, Part> parts;
 

@@ -24,11 +24,12 @@ package org.docx4j.openpackaging.parts;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.docProps.custom.Properties;
 import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -60,7 +61,7 @@ public class DocPropsCustomPart extends JaxbXmlPart<Properties> {
 	
 	
 	
-	private static Logger log = Logger.getLogger(DocPropsCustomPart.class);
+	private static Logger log = LoggerFactory.getLogger(DocPropsCustomPart.class);
 	
 	
 	/* fmtid (Format ID) Uniquely relates a custom property with an OLE property.

@@ -19,8 +19,6 @@
  */
 package org.docx4j.model.properties.run;
 
-import org.docx4j.XmlUtils;
-import org.docx4j.fonts.Mapper;
 import org.docx4j.fonts.PhysicalFont;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;

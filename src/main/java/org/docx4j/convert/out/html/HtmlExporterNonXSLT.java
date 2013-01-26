@@ -5,7 +5,6 @@ package org.docx4j.convert.out.html;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
 import org.docx4j.TraversalUtil.CallbackImpl;
 import org.docx4j.XmlUtils;
@@ -26,6 +25,8 @@ import org.docx4j.wml.PPr;
 import org.docx4j.wml.R;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.Tbl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -50,7 +51,7 @@ import org.w3c.dom.Node;
  */
 public class HtmlExporterNonXSLT {
 
-	private static Logger log = Logger.getLogger(HtmlExporterNonXSLT.class);
+	private static Logger log = LoggerFactory.getLogger(HtmlExporterNonXSLT.class);
 
 	protected static String inputfilepath;	
 	protected static String outputfilepath;

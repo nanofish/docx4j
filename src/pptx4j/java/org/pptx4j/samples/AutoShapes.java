@@ -23,9 +23,7 @@ package org.pptx4j.samples;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
-import org.pptx4j.jaxb.Context;
 import org.docx4j.dml.STShapeType;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
@@ -33,7 +31,10 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
+import org.pptx4j.jaxb.Context;
 import org.pptx4j.pml.Shape;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -51,7 +52,7 @@ import org.pptx4j.pml.Shape;
  */
 public class AutoShapes  {
 	
-	protected static Logger log = Logger.getLogger(AutoShapes.class);
+	protected static Logger log = LoggerFactory.getLogger(AutoShapes.class);
 		
 	public static void main(String[] args) throws Exception {
 

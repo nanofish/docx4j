@@ -83,19 +83,13 @@
  */
 package org.docx4j.model.listnumbering;
 
-import java.math.BigInteger;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.wml.Lvl;
-import org.docx4j.wml.NumFmt;
-import org.docx4j.wml.NumberFormat;
 import org.docx4j.wml.Numbering;
-import org.docx4j.wml.PPrBase.NumPr;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Represents:
@@ -129,7 +123,7 @@ import org.docx4j.wml.PPrBase.NumPr;
  */
 public class AbstractListNumberingDefinition {
 	
-	protected static Logger log = Logger.getLogger(AbstractListNumberingDefinition.class);
+	protected static Logger log = LoggerFactory.getLogger(AbstractListNumberingDefinition.class);
 	
         private HashMap<String, ListLevel> listLevels;
 

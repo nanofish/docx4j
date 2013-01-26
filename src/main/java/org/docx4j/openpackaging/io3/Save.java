@@ -27,7 +27,6 @@ import java.io.OutputStream;
 import java.net.URI;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
 import org.docx4j.Docx4jProperties;
 import org.docx4j.docProps.core.CoreProperties;
 import org.docx4j.docProps.extended.Properties;
@@ -42,12 +41,13 @@ import org.docx4j.openpackaging.parts.DocPropsCorePart;
 import org.docx4j.openpackaging.parts.DocPropsExtendedPart;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.Part;
-import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.XmlPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPart;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.openpackaging.parts.relationships.RelationshipsPart;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -59,7 +59,7 @@ import org.docx4j.relationships.Relationship;
  */
 public class Save {
 	
-	private static Logger log = Logger.getLogger(Save.class);				
+	private static Logger log = LoggerFactory.getLogger(Save.class);				
 	
 	public Save(OpcPackage p) {
 		
@@ -299,7 +299,7 @@ public class Save {
 		
 		} catch (Exception e) {
 			e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 			throw new Docx4JException("Problem saving part " + part.getPartName(), e);
 		} 
 		

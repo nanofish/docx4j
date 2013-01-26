@@ -23,7 +23,6 @@ import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.log4j.Logger;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.out.AbstractWmlConversionContext;
 import org.docx4j.dml.CTBlip;
@@ -36,6 +35,8 @@ import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Node;
@@ -148,7 +149,7 @@ import org.w3c.dom.traversal.NodeIterator;
  */
 public class WordXmlPictureE20 extends AbstractWordXmlPicture {
 	
-	protected static Logger log = Logger.getLogger(WordXmlPictureE20.class);
+	protected static Logger log = LoggerFactory.getLogger(WordXmlPictureE20.class);
 
 	// It'll be one or the other of these
 	private Inline inline;

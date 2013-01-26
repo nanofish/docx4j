@@ -8,13 +8,11 @@ import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 
 import org.docx4j.XmlUtils;
-import org.docx4j.jaxb.Context;
 import org.docx4j.jaxb.NamespacePrefixMappings;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.parts.CustomXmlPart;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
-import org.docx4j.openpackaging.parts.JaxbXmlPartXPathAware;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.w3c.dom.Document;
@@ -75,7 +73,7 @@ public abstract class JaxbCustomXmlDataStoragePart<E> extends JaxbXmlPart<E> imp
 		try {
 			this.unmarshal(doc.getDocumentElement() );
 		} catch (JAXBException e) {
-			log.error(e);
+			log.error("", e);
 		}
 	}
 	

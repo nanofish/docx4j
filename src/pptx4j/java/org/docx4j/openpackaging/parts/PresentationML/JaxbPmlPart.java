@@ -22,16 +22,13 @@ package org.docx4j.openpackaging.parts.PresentationML;
 
 import java.util.Random;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-
-import org.pptx4j.jaxb.Context;
 import org.docx4j.openpackaging.contenttype.ContentTypes;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.exceptions.PartUnrecognisedException;
 import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.Part;
 import org.docx4j.openpackaging.parts.PartName;
+import org.pptx4j.jaxb.Context;
 
 
 
@@ -125,7 +122,7 @@ public abstract class JaxbPmlPart<E> extends JaxbXmlPart<E> {
 //			log.debug( this.getClass().getName() + " unmarshalled" );									
 //
 //		} catch (JAXBException e ) {
-//			log.error(e);
+//			log.error("", e);
 //			throw e;
 //		}
 //		return jaxbElement;

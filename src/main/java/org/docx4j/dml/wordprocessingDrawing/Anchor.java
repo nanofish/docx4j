@@ -22,7 +22,13 @@
 package org.docx4j.dml.wordprocessingDrawing;
 
 import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
 
 import org.docx4j.dml.CTNonVisualDrawingProps;
 import org.docx4j.dml.CTNonVisualGraphicFrameProperties;

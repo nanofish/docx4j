@@ -21,14 +21,15 @@ package org.docx4j.model;
 
 import javax.xml.transform.TransformerException;
 
-import org.apache.log4j.Logger;
 import org.docx4j.wml.R.Sym;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Node;
 
 public class SymbolModel extends Model {
 	public static final String MODEL_ID = "w:sym";
 	
-	private final static Logger log = Logger.getLogger(SymbolModel.class);
+	private final static Logger log = LoggerFactory.getLogger(SymbolModel.class);
 
 	private Sym sym;
 	/**

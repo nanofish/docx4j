@@ -26,8 +26,6 @@ import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 
-import org.docx4j.XmlUtils;
-import org.docx4j.dml.CTBlip;
 import org.docx4j.model.datastorage.BindingHandler;
 import org.docx4j.model.datastorage.OpenDoPEHandler;
 import org.docx4j.model.datastorage.OpenDoPEIntegrity;
@@ -38,7 +36,6 @@ import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.CustomXmlDataStoragePart;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
-import org.docx4j.samples.ImageConvertEmbeddedToLinked.TraversalUtilBlipVisitor;
 import org.docx4j.utils.SingleTraversalUtilVisitorCallback;
 import org.docx4j.utils.TraversalUtilVisitor;
 import org.docx4j.wml.SdtElement;

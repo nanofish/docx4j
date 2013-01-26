@@ -20,7 +20,6 @@
 package org.docx4j.model.properties.run;
 
 import org.docx4j.jaxb.Context;
-import org.docx4j.wml.BooleanDefaultTrue;
 import org.docx4j.wml.CTVerticalAlignRun;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.STVerticalAlignRun;

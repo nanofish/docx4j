@@ -22,8 +22,8 @@ package org.docx4j.utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.docx4j.XmlUtils;
 import org.docx4j.TraversalUtil.CallbackImpl;
+import org.docx4j.XmlUtils;
 import org.docx4j.wml.CTAltChunk;
 
 /**

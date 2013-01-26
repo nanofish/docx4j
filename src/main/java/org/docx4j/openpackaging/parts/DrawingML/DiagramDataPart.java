@@ -21,43 +21,37 @@
 package org.docx4j.openpackaging.parts.DrawingML;
 
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.UUID;
 
 import javax.xml.bind.JAXBElement;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
-import org.apache.log4j.Logger;
 import org.docx4j.TraversalUtil;
-import org.docx4j.XmlUtils;
 import org.docx4j.TraversalUtil.Callback;
+import org.docx4j.XmlUtils;
 import org.docx4j.dml.CTTextBody;
 import org.docx4j.dml.diagram.CTCxn;
 import org.docx4j.dml.diagram.CTDataModel;
 import org.docx4j.dml.diagram.CTElemPropSet;
 import org.docx4j.dml.diagram.CTPt;
-import org.docx4j.dml.diagram.STCxnType;
 import org.docx4j.dml.diagram.STPtType;
-import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
-import org.docx4j.openpackaging.parts.JaxbXmlPart;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPartAbstractImage;
 import org.docx4j.openpackaging.parts.relationships.Namespaces;
 import org.docx4j.relationships.Relationship;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public final class DiagramDataPart extends JaxbDmlPart<CTDataModel> {
 	
-	private static Logger log = Logger.getLogger(DiagramDataPart.class);			
+	private static Logger log = LoggerFactory.getLogger(DiagramDataPart.class);			
 	
 	public DiagramDataPart(PartName partName) throws InvalidFormatException {
 		super(partName);
@@ -356,7 +350,7 @@ public final class DiagramDataPart extends JaxbDmlPart<CTDataModel> {
 					ddp.getPackage(), ddp, bytes);
 		} catch (Exception e) {
 			e.printStackTrace();
-			log.error(e);
+			log.error("", e);
 
 			// Can't use this image, so insert a placeholder
 			log.info(".. attempting to use broken image placeholder");

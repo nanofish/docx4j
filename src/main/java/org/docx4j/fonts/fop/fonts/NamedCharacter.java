@@ -26,7 +26,6 @@
 package org.docx4j.fonts.fop.fonts;
 
 import org.apache.xmlgraphics.fonts.Glyphs;
-
 import org.docx4j.fonts.fop.util.CharUtilities;
 
 /**

@@ -34,7 +34,6 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-import org.docx4j.XmlUtils;
 import org.docx4j.dml.picture.Pic;
 
 

@@ -3,11 +3,12 @@
  */
 package org.docx4j.fonts;
 
-import org.apache.log4j.Logger;
 import org.docx4j.fonts.fop.fonts.EmbedFontInfo;
 import org.docx4j.fonts.fop.fonts.FontResolver;
 import org.docx4j.fonts.fop.fonts.LazyFont;
 import org.docx4j.fonts.fop.fonts.Typeface;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * This class represents a font which is
@@ -27,7 +28,7 @@ import org.docx4j.fonts.fop.fonts.Typeface;
  *
  */
 public class PhysicalFont {
-	protected static Logger log = Logger.getLogger(PhysicalFont.class);		
+	protected static Logger log = LoggerFactory.getLogger(PhysicalFont.class);		
 	protected FontResolver fontResolver = null;
 	protected boolean loadTypefaceFailed = false;
 	protected Typeface typeface = null;

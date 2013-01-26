@@ -20,15 +20,11 @@
 package org.docx4j.samples;
 
 import java.io.File;
-import java.io.OutputStream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.docx4j.XmlUtils;
 import org.docx4j.convert.in.xhtml.XHTMLImporter;
-import org.docx4j.convert.out.html.AbstractHtmlExporter;
-import org.docx4j.convert.out.html.AbstractHtmlExporter.HtmlSettings;
-import org.docx4j.convert.out.html.HtmlExporterNG2;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.NumberingDefinitionsPart;
 

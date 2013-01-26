@@ -23,7 +23,6 @@ package org.docx4j.samples;
 
 
 import java.io.File;
-import java.io.FileInputStream;
 
 import org.docx4j.openpackaging.io.SaveToZipFile;
 import org.docx4j.openpackaging.packages.OpcPackage;

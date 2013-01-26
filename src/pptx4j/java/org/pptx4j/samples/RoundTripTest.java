@@ -21,9 +21,10 @@
 package org.pptx4j.samples;
 
 
-import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -37,7 +38,7 @@ import org.docx4j.openpackaging.packages.PresentationMLPackage;
  */
 public class RoundTripTest {
 	
-	protected static Logger log = Logger.getLogger(RoundTripTest.class);
+	protected static Logger log = LoggerFactory.getLogger(RoundTripTest.class);
 			
 	public static void main(String[] args) throws Exception {
 
