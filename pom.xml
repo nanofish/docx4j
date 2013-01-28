@@ -9,7 +9,7 @@
   </parent>  	
 	<groupId>org.docx4j</groupId>
 	<artifactId>docx4j</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0-NO-LOG4J</version>
 	<packaging>jar</packaging>
 	<name>docx4j</name>
 	<description>
